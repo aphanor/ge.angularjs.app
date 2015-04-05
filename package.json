@@ -1,0 +1,19 @@
+{
+  "name": "ge",
+  "version": "0.0.1",
+  "description": "Exchange your stuffs online.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aphanor/ge.angularjs.app.git"
+  },
+  "author": "Alexis Phanor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aphanor/ge.angularjs.app/issues"
+  },
+  "homepage": "https://github.com/aphanor/ge.angularjs.app"
+}
