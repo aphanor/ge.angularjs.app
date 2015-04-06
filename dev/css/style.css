@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+body {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+	font-size: 10px;
+	color: #aaa;
+	text-decoration: none;
+	bottom: 0;
+	position: fixed;
+	background-color: #000;
+	opacity: 0.2;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+footer p {
+	margin: 1em 0;
+	color: #FFF;
+	background: none;
+	z-index: 1;
+}
+
+div.main {
+	margin:0 auto;
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+    top: 0; right: 0; bottom: 10px; left: 0;
+}
+
+div.main::after {
+	content: '';
+	background-image: url('http://www.datamanager.it/wp-content/uploads/2014/04/con-air-france-i-giornali-sono-anche-digitali-air_france_stampa_digitale.jpg');
+	background-size: cover;
+	position: absolute;
+	top: 0; right: 0; bottom: 10px; left: 0;
+	opacity: 0.3;
+	-webkit-filter: blur(4px);
+	-moz-filter: blur(4px);
+	-ms-filter: blur(4px);
+	-o-filter: blur(4px);
+	filter: blur(4px);
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+section#main-container {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	height: 100%;
+	display: flex;
+	background-size: cover;
+}
+
+section#dashboard {
+	color: #000;
+}
+
+.center {
+	margin: 0 auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+.center h3 {
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	line-height: 1.5;
+	margin-top: 10%;
+}
+
+.main.center img {
+	margin-top: 4em;
+}
+
+ul.links-container {
+	margin: 1em;
+	display: block;
+	position: fixed;
+	bottom: 5%;
+	width: 100%;
+	padding: 0;
+}
+
+ul.links-container li {
+	list-style: none;
+	overflow: hidden;
+	clear: both;
+	display: inline-block;
+	margin: 1em auto;
+}
+
+ul.links-container li a {
+	border: 1px solid #3b5998;
+	color: #3b5998;
+	background: 0 0;
+	box-sizing: border-box;
+	margin: 20px 20px 20px 0;
+	border-radius: 3px;
+	padding: 10px;
+	text-transform: uppercase;
+	line-height: 1em;
+	display: block;
+	transition: all .2s ease-in-out;
+	letter-spacing: .05em;
+}
+
+ul.links-container li a.twitter {
+	color: #55acee;
+	border: 1px solid #55acee;
+}
+
+ul.links-container li a.google {
+	color: #d34836;
+	border: 1px solid #d34836;
+}
+
+ul.links-container li a:hover {
+	text-decoration: none;
+	transition: all .25s ease-in-out;
+	background-color: #3b5998;
+	color: #FFF;
+}
+
+ul.links-container li a.twitter:hover {
+	background-color: #55acee;
+}
+
+ul.links-container li a.google:hover {
+	background-color: #d34836;
+}

@@ -2,7 +2,7 @@
   "name": "ge",
   "version": "0.0.1",
   "description": "Exchange your stuffs online.",
-  "main": "index.html",
+  "main": "dev/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/aphanor/ge.angularjs.app/issues"
   },
-  "homepage": "https://github.com/aphanor/ge.angularjs.app"
+  "homepage": "https://github.com/aphanor/ge.angularjs.app",
+  "devDependencies": {
+    "gulp",
+    "gulp-util",
+    "gulp-webserver"
+  }
 }
