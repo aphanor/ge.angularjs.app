@@ -249,3 +249,20 @@ li.feed-post {
     height: 100%;
     overflow: auto;
 }
+
+.filters input, button {
+	height: 20px;
+}
+
+.filters input, textarea, select, button {
+	width : 100px;
+	margin: 0;
+	
+	-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+	-moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+	box-sizing: border-box;
+}
+
+.notif {
+	color: red;
+}
