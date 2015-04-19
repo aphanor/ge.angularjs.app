@@ -55,7 +55,7 @@
 	    <script type="text/javascript" src="js/registration.js"></script>
 	    <script type="text/javascript" src="js/status.js"></script>
 	    <script type="text/javascript" src="js/timeline.js"></script>
-        
+        <script type="text/javascript" src="js/offers.js"></script>
     </head>
     <body>
 	    
@@ -87,7 +87,14 @@
 							<img src="{{ image }}">
 							<p>{{ currentUser }}</p>
 						</div>
-						<div class="filters"></div>
+						<div class="filters">
+							<form name="interest" ng-submit="interest()">
+								<input type="text" name="image" ng-model="imagePost" placeholder="Name:"><br>
+								<input type="text" name="name" ng-model="namePost" placeholder="Offers:"><br>
+								<textarea name="description" ng-model="descriptionPost" rows="4" cols="50">Message here...</textarea><br>
+								<button type="submit" class="btn">Post</button>
+							</form>
+						</div>
 					</div>
 					<div class="col-md-7">
 						<div id="mainpart" ng-controller="accountDetails">
