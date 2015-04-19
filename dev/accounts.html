@@ -20,16 +20,18 @@
 	    <link rel="stylesheet" type="text/css" href="css/style.css" />
 	    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
 	    
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	    
 	    <!-- Latest compiled and minified CSS -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	    
 	    <!-- Optional theme -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	    
 	    <!-- Latest compiled and minified JavaScript -->
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	    
+	    <script>$('.dropdown-toggle').dropdown()</script>
 
 	    <!-- Angular JS -->
 	    
@@ -60,29 +62,35 @@
 	    <section id="dashboard" class="center">
 			<div class="container" ng-show="currentUser" ng-controller="loginController">
 				<div class="row header">
-					<div class="col-md-1 logo">
+					<div class="col-md-3 logo">
 						<img src="http://www.brandinmotion.co.uk/wp-content/uploads/2014/04/placeholder-560x420.png" width="50">
+						<i class="fa fa-home"></i>
+						<i class="fa fa-bars"></i>
 					</div>
-					<div class="col-md-9"></div>
+					<div class="col-md-7">
+						<div class="input-group">
+					      <input type="text" class="form-control" placeholder="Search for products & more ...">
+					      <span class="input-group-btn">
+					        <span class="btn"><i class="fa fa-search"></i></span>
+					      </span>
+					    </div><!-- /input-group -->
+					</div>
 					<div class="col-md-2 user">
-					    <div class="circular"><img src="{{ image }}"></div>
-					    <div class="username"><p>{{ currentUser }}</p></div>
-					    <div class="closy"><a ng-click="logOut()" href="#"><i class="fa fa-times"></i></a></div>
+						<a ng-click="logOut()" href="#"><i class="fa fa-times"></i></a>
+						<i class="fa fa-inbox"></i>
+						<i class="fa fa-user"></i>
 					</div>
 				</div>
 				<div class="row view clearfix">
-					<div class="col-md-1">
-						<ul class="vertical-nav">
-							<li><i class="fa fa-list-ul"></i></li>
-							<li><i class="fa fa-barcode"></i></li>
-							<li><i class="fa fa-user"></i></li>
-							<li><i class="fa fa-inbox"></i></li>
-							<li><i class="fa fa-question-circle"></i></li>
-						</ul>
+					<div class="col-md-3">
+						<div class="username">
+							<img src="{{ image }}">
+							<p>{{ currentUser }}</p>
+						</div>
+						<div class="filters"></div>
 					</div>
-					<div class="col-md-11">
+					<div class="col-md-7">
 						<div id="mainpart" ng-controller="accountDetails">
-						<div>
 							<form style="display: none;" name="articles" ng-submit="articlesPost()">
 								<label>Image:</label>
 								<input type="text" name="image" ng-model="imagePost"><br>
@@ -95,15 +103,24 @@
 								<button type="submit" class="btn">Post</button>
 							</form>
 							<ul>
-								<li ng-repeat="post in posts">
-									<img src="{{ post.url }}"
-									<p>Author {{ post.author }}</p>
-									<p>Name: {{ post.name }}</p>
-									<p>Description: {{ post.description }}
+								<li class="feed-post" ng-repeat="post in posts">
+									<div id="post-container">
+										<div class="post_img">
+											<img src="{{ post.url }}">
+										</div>
+										<div class="post-content">	
+											<p>Author {{ post.author }}</p>
+											<p>Name: {{ post.name }}</p>
+											<p>Description: {{ post.description }}</p>
+										</div>
+									</div>
 								</li>
+								<div class="clear"></div>
 							</ul>
 						</div>
 					</div>
+					<div class="col-md-2">
+						<p>Alexis</p>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  webserver = require('gulp-webserver');
+gutil = require('gulp-util'),
+webserver = require('gulp-webserver');
 
 gulp.task('js', function() {
   gulp.src('dev/js/**/*')
