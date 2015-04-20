@@ -23,5 +23,9 @@ ge.controller('offersController', ['$scope', '$rootScope', '$firebaseAuth', '$lo
 	dataArray.$watch(function(event) {
 		$rootScope.notifications = dataArray.length;
 	});
+
+	var ref = new Firebase(FIREBASE_URL + '/offers');
+	var list = $firebaseArray(ref);
+	var models = $firebaseObject(ref);
 	
 }]);
